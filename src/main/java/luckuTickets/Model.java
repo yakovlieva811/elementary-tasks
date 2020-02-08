@@ -1,4 +1,4 @@
-package LuckuTickets;
+package luckuTickets;
 
 public class Model {
     int counterMos;

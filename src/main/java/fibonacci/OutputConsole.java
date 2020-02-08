@@ -1,23 +1,18 @@
 package fibonacci;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class OutputConsole {    // отвечает за вывод данных в консоль
+public class OutputConsole {
 
 
-    static void printNotFound(){
-        System.out.println(" В данном диапазоне не найденный числа");
+    static void printToConsole(String output){
+        System.out.println(output);
     }
+    static void printList(List<Integer> nums) {
+        for (Integer num : nums) {
+            System.out.print(num + "  ");
 
-    static void printEx(){
-        System.out.println(" Параметры введены некорректно");
-    }
-
-    static void printList(ArrayList<Integer> nums){
-        for (Integer num: nums) {
-            System.out.println(num + ", ");
         }
-        System.out.println(" Параметры введены некорректно");
     }
 
 }

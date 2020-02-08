@@ -1,4 +1,4 @@
-package Envelope;
+package envelope;
 
 import java.util.Scanner;
 

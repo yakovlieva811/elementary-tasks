@@ -1,7 +1,6 @@
-package FiguersTask2and3;
+package triangles;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -10,20 +9,19 @@ public class Model {
     List<Triangle> triangles =  new ArrayList<>();
 
     public void run(){
-        Output.printHint();
+        OutputConsole.printHint();
         String input=Input.readInput();
         creation(input);
         boolean done = false;
         while(!done){
-            Output.toContinue();
-            boolean answer =Input.readAnswer();
-            if(answer){
-                Output.printDemand();
+            OutputConsole.toContinue();
+            if(Input.readAnswer()){
+                OutputConsole.printDemand();
                 input=Input.readInput();
                 creation(input);
             }else{
                 sort();
-                Output.printResult(triangles);
+                OutputConsole.printResult(triangles);
                 done=true;
             }
         }
@@ -33,12 +31,12 @@ public class Model {
     private void creation(String input){
         if(Validator.checkInput(input)){
             if(newTriangle(input)){
-               Output.hasBeenCreated();
+               OutputConsole.hasBeenCreated();
             }else{
-                Output.cannotExist();
+                OutputConsole.cannotExist();
             }
         }else{
-            Output.printExeption();
+            OutputConsole.printExeption();
         }
     }
 
@@ -47,8 +45,8 @@ public class Model {
         Collections.sort(triangles);
     }
 
-    private boolean newTriangle(String input){ // проверяет может ли существовать треугольник + создает и добавляет
-        String[] data = input.split(","); //todo вынести в общий и если валидаор ок то вынести
+    private boolean newTriangle(String input){
+        String[] data = input.split(",");
         if(data.length==2){
             Triangle triangle = new Triangle(data[0],Double.parseDouble(data[1]));
             return addTR(triangle);
@@ -60,7 +58,7 @@ public class Model {
 
 
     private boolean addTR(Triangle tr){
-        if(tr.canBeExcist()){
+        if(tr.canBeExist()){
         triangles.add(tr);
         return true;
         }else{

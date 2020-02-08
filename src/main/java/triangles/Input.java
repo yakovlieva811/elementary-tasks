@@ -1,4 +1,4 @@
-package FiguersTask2and3;
+package triangles;
 
 import java.util.Scanner;
 

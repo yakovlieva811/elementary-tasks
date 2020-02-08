@@ -1,4 +1,4 @@
-package LuckuTickets;
+package luckuTickets;
 
 import java.util.Scanner;
 

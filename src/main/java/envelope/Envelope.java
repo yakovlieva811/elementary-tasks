@@ -1,4 +1,4 @@
-package Envelope;
+package envelope;
 
 public class Envelope {
 
@@ -11,7 +11,7 @@ public class Envelope {
     }
 
 
-    boolean putTo(Envelope secondEnvelope) { // todo в обратное порядке запуск 2
+    boolean putTo(Envelope secondEnvelope) {
         if (this.height < secondEnvelope.height && this.width < secondEnvelope.width) {
 
             return true;

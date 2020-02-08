@@ -1,4 +1,4 @@
-package Envelope;
+package envelope;
 
 public class Controller {
 
@@ -9,7 +9,7 @@ public class Controller {
             Output.print("Конверт 2");
             Envelope envelope2 = new Envelope(checkSide(), checkSide());
             Output.print(Model.getAnswer(envelope1, envelope2));
-            if (doContinue()) {
+            if (!doContinue()) {
                 break;
             }
         }

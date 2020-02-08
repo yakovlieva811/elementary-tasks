@@ -1,4 +1,4 @@
-package FiguersTask2and3;
+package triangles;
 
 public class Triangle implements Comparable<Triangle>{
 
@@ -19,16 +19,16 @@ public class Triangle implements Comparable<Triangle>{
         this.name = name;
     }
 
-    double perimetr(){
+    double halfPerimetr(){
         return (width+height+thirdSide)/2;
     }
 
     double area(){
-       double p =perimetr();
+       double p =halfPerimetr();
        return ( Math.sqrt(p*(p-width)*(p-height)*(p-thirdSide)));
     }
 
-    boolean canBeExcist(){
+    boolean canBeExist(){
         return (width + height) > thirdSide && (width + thirdSide) > height && (height + thirdSide) > width;
     }
 

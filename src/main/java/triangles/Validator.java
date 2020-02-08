@@ -1,4 +1,4 @@
-package FiguersTask2and3;
+package triangles;
 
 public class Validator {
 
@@ -15,13 +15,7 @@ public class Validator {
             }else{
                 return false;
             }
-        }catch(NullPointerException ex){
-            return false;
-        }
-        catch(ArrayIndexOutOfBoundsException ex){
-            return false;
-        }
-        catch(NumberFormatException ex){
+        }catch(NullPointerException | NumberFormatException | ArrayIndexOutOfBoundsException ex){
             return false;
         }
     }

@@ -1,4 +1,4 @@
-package LuckuTickets;
+package luckuTickets;
 
 public class Controller {
         View view = new View();
