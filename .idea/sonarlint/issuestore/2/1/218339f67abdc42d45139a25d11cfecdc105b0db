@@ -1,19 +1,0 @@
-
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§§«Ñ8ğ˜ƒÜ.
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ù¬Ìÿ8ğ˜ƒÜ.
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(ŒŸ¬ùÿÿÿÿ8ğ˜ƒÜ.
-nsquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(ÜöÓ€úÿÿÿÿ8ß¼¬ÿ.
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ğ˜ƒÜ.
-U
-squid:S106"9Replace this use of System.out or System.err by a logger.(ºÏäf8ğ˜ƒÜ.
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(øîŞÒ8ğ˜ƒÜ.
-V
-squid:S106 "9Replace this use of System.out or System.err by a logger.(‡òşã8ğ˜ƒÜ.
-V
-squid:S106	"9Replace this use of System.out or System.err by a logger.(—ºê†8ğ˜ƒÜ.
-[
-squid:S106("9Replace this use of System.out or System.err by a logger.(¿á”¥ÿÿÿÿÿ8ğ˜ƒÜ.
-]squid:S1118":Add a private constructor to hide the implicit public one.(ƒœ ıÿÿÿÿ8ğ˜ƒÜ.

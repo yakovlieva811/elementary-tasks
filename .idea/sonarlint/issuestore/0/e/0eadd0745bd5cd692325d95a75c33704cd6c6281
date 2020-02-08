@@ -1,8 +1,8 @@
 
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(›­‹ó8ê¢×¹€.
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(× ±¹ùÿÿÿÿ8êÆŸ»€.
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.( —Á€øÿÿÿÿ8æÁ—¼€.
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(ï‰Ü8ß©Õ¹€.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(›­‹ó8ê¢×¹€.
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.( —Á€øÿÿÿÿ8æÁ—¼€.
+[
+squid:S106	"9Replace this use of System.out or System.err by a logger.(× ±¹ùÿÿÿÿ8êÆŸ»€.
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(ï‰Ü8ß©Õ¹€.

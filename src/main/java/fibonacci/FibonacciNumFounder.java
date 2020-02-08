@@ -5,7 +5,7 @@ import envelope.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FibonacciNumFounder {
+public class FibonacciNumFounder<df> {
 
     private List<Integer> row = new ArrayList<>();
 
