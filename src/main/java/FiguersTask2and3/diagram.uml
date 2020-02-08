@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="213.0" y="0.0">FiguersTask2and3.Triangle</node>
+    <node x="495.0" y="76.0">FiguersTask2and3.Input</node>
+    <node x="656.0" y="32.0">FiguersTask2and3.Output</node>
+    <node x="314.6666666666667" y="412.0">FiguersTask2and3.Task3</node>
+    <node x="0.0" y="65.0">FiguersTask2and3.Validator</node>
+    <node x="295.6666666666667" y="265.0">FiguersTask2and3.Model</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="FiguersTask2and3.Model" target="FiguersTask2and3.Triangle">
+      <point x="-15.333333333333371" y="-48.5" />
+      <point x="372.3333333333333" y="225.0" />
+      <point x="344.0" y="225.0" />
+      <point x="0.0" y="102.5" />
+    </edge>
+    <edge source="FiguersTask2and3.Model" target="FiguersTask2and3.Input">
+      <point x="46.0" y="-48.5" />
+      <point x="433.6666666666667" y="235.0" />
+      <point x="565.5" y="235.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="FiguersTask2and3.Model" target="FiguersTask2and3.Validator">
+      <point x="-76.66666666666671" y="-48.5" />
+      <point x="311.0" y="245.0" />
+      <point x="96.5" y="245.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="FiguersTask2and3.Task3" target="FiguersTask2and3.Model">
+      <point x="-36.5" y="-26.5" />
+      <point x="351.1666666666667" y="387.0" />
+      <point x="341.6666666666667" y="387.0" />
+      <point x="-46.0" y="48.5" />
+    </edge>
+    <edge source="FiguersTask2and3.Model" target="FiguersTask2and3.Output">
+      <point x="76.66666666666669" y="-48.5" />
+      <point x="464.33333333333337" y="245.0" />
+      <point x="744.0" y="245.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="250.5" y="182.0000000000001" />
+  <SelectedNodes>
+    <node>FiguersTask2and3.Model</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
