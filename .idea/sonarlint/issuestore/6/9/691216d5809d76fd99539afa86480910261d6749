@@ -1,0 +1,18 @@
+
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÔÑÄ‡
+?squid:S1643}"Use a StringBuilder instead.(ñçÂúÿÿÿÿ8Å‰×€.
+;squid:S1643"Use a StringBuilder instead.(¶éËˆ8Å‰×€.
+ksquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ç ¼`8Å‰×€.
+usquid:S00117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë°¤Òÿÿÿÿÿ8Ûüß€.
+Vsquid:S2130M"8Use "Long.parseLong" for this string-to-long conversion.(— İ­8Å‰×€.
+:squid:S1643{"Use a StringBuilder instead.(‰×ù´8Å‰×€.
+usquid:S00117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ı”ôøÿÿÿÿ8Å‰×€.
+?squid:S1643~"Use a StringBuilder instead.(Åã«ùÿÿÿÿ8Å‰×€.
+;squid:S1643…"Use a StringBuilder instead.(œ©Ê¶8Å‰×€.
+Msquid:S1066O"/Merge this if statement with the enclosing one.(¤ãçÏ8Å‰×€.
+;squid:S1643‚"Use a StringBuilder instead.(ÜÖŒ8Å‰×€.
+usquid:S37769"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(±Æí™ùÿÿÿÿ8Å‰×€.
+^squid:S1858k";There's no need to call "toString()" on an array of String.(©‚ÈÆøÿÿÿÿ8Å‰×€.
+V
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(†¯÷8ÄÑà€.
