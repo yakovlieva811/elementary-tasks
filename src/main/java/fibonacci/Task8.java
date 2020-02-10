@@ -6,4 +6,5 @@ public class Task8 {
         Controller controller = new Controller();
         controller.init(args);
     }
+
 }

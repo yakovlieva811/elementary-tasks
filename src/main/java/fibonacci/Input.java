@@ -6,7 +6,10 @@ public class Input {
     static boolean checkNums(String[] args) {
         try {
             for (String num : args) {
-                int begin = Integer.parseInt(num);
+                int number = Integer.parseInt(num);
+                if(number<0){
+                    return false;
+                }
             }
             return true;
         } catch (NumberFormatException ex) {

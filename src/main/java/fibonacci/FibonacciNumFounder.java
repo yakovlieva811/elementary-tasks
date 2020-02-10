@@ -5,7 +5,7 @@ import envelope.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FibonacciNumFounder<df> {
+public class FibonacciNumFounder {
 
     private List<Integer> row = new ArrayList<>();
 
@@ -54,11 +54,12 @@ public class FibonacciNumFounder<df> {
     }
 
 
-    private boolean calculateFromTo(int from, int to) {
+    private void calculateFromTo(int from, int to) {
         row.clear();
-        int prev = 1;
+        int prev = 0;
         int next = 1;
         int number;
+        sortValues(from,to);
         for (int i = 3; i <= to; i++) {
             number = prev + next;
             if (number > from && number < to) {
@@ -67,14 +68,20 @@ public class FibonacciNumFounder<df> {
             prev = next;
             next = number;
         }
-        return true;
+    }
+    private void sortValues(int from, int to){
+        if(from>to){
+            int temp = from;
+            from = to;
+            to = temp;
+        }
     }
 
     private boolean calculateByAmountOfNums(int amount) {
         row.clear();
         int number;
         int next = 1;
-        int prev = 1;
+        int prev = 0;
         for (int i = 3; ; i++) {
             number = prev + next;
             if (((int) Math.log10(number) + 1) == amount) {

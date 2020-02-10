@@ -41,6 +41,6 @@ public class Controller {
     private boolean doContinue() {
         Output.print(" Хотите продолжить ? (y,yes / no )");
         String answer = Input.readInput();
-        return (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes"));
+        return ( answer.trim().equalsIgnoreCase("y") ||  answer.trim().equalsIgnoreCase("yes"));
     }
 }
