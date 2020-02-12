@@ -1,9 +1,12 @@
 package spellout;
 
 public class Output {
-    public static void print(StringBuilder numberInWords) {
+    public static void printStrBuilder(StringBuilder numberInWords) {
         System.out.println(numberInWords);
+    }public static void printString(String output) {
+        System.out.println(output);
     }
+
 
     public static void printExeption() {
         System.out.println(" Пожалуйста, введите число.");

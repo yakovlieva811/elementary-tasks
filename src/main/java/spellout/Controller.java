@@ -4,16 +4,23 @@ import java.util.InputMismatchException;
 
 public class Controller {
     public static void init() {
-        NumberReader numberReader = new NumberReader();
-        boolean done = false;
-        while (!done) {
+
+
+        while (true) {
             try {
-                numberReader.setNumber(Input.read());
-                Output.print(numberReader.getNumberInWords());
-                done = true;
-            } catch (InputMismatchException ex) {
-                Output.printExeption();
-            } catch (ArrayIndexOutOfBoundsException ex) {
+                NumberReader numberReader = new NumberReader();
+                numberReader.setNumber(Input.readNum());
+                Output.printStrBuilder(numberReader.getNumberInWords());
+                Output.printString(" Продолжить?");
+                if (Input.readStr().equalsIgnoreCase("out") ) { //|| !Input.readStr().equalsIgnoreCase("yes")
+                    System.out.println("не продолжю ");
+                    break;
+
+                }
+                System.out.println(" продолжю ");
+                continue;
+
+            } catch (InputMismatchException | ArrayIndexOutOfBoundsException ex) {
                 Output.printExeption();
             }
         }

@@ -15,7 +15,7 @@ public class NumberReader {
     }
 
     public StringBuilder getNumberInWords() {
-       go();
+        go();
         return numberInWords;
     }
 
@@ -115,6 +115,7 @@ public class NumberReader {
             int num3 = Integer.parseInt(segmentString.substring(2, 3));    // третья цифра
             int num23 = Integer.parseInt(segmentString.substring(1, 3));   // вторая и третья для двузначных
 
+            System.out.println("1) num23 = " + num23);
             /* читаем цифры*/
             if (currentSegment > 99) {         // сотни
                 numberInWords.append(nums100[num1]).append(" ");
@@ -130,21 +131,31 @@ public class NumberReader {
 
             /*добавляем названия разрядов*/
             if ((amountOfSegments - 2) > -1) {
-                numberInWords.append(analyzeWordsForm(currentSegment, forms[amountOfSegments - 2][0], forms[amountOfSegments - 2][1], forms[amountOfSegments - 2][2])).append(" ");
+                numberInWords.append(analyzeWordsForm(num23, forms[amountOfSegments - 2][0], forms[amountOfSegments - 2][1], forms[amountOfSegments - 2][2])).append(" ");
             }
             amountOfSegments--;
         }
     }
 
 
-    private String analyzeWordsForm(int amountOfNumbers, String wordFormFor1, String wordFormFor24, String wordFormFor5AndMore) {
-        int num = amountOfNumbers % 10;
-        if (num > 1 && num < 5) {
-            return wordFormFor24;
-        } else if (num == 1) {
-            return wordFormFor1;
+    private String analyzeWordsForm(int currentSegment, String wordFormFor1, String wordFormFor24, String wordFormFor5AndMore) {
+        System.out.println("currentSegment = " + currentSegment);
+        if (currentSegment > 10 && currentSegment < 21) {
+            int num = currentSegment;
+            System.out.println("num = " + num);
+
+            return wordFormFor5AndMore;
+        } else {
+            int num = currentSegment % 10;
+            System.out.println("num = " + num);
+            if (num > 1 && num < 5) {
+                return wordFormFor24;
+            } else if (num == 1) {
+                return wordFormFor1;
+            }
+            return wordFormFor5AndMore;
+
         }
-        return wordFormFor5AndMore;
     }
 }
 
