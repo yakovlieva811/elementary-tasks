@@ -3,17 +3,40 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="530.0" y="44.0">spellout.Input</node>
-    <node x="335.0" y="33.0">spellout.Output</node>
-    <node x="269.875" y="213.0">spellout.Controller</node>
-    <node x="0.0" y="0.0">spellout.NumberReader</node>
-    <node x="256.375" y="316.0">spellout.Task5</node>
+    <node x="246.0" y="66.0">spellout.Input</node>
+    <node x="0.0" y="66.0">spellout.Output</node>
+    <node x="362.25" y="301.0">spellout.Controller</node>
+    <node x="430.0" y="0.0">spellout.NumberReader</node>
+    <node x="348.75" y="404.0">spellout.Task5</node>
   </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="707.0" y="142.0" />
+  <edges>
+    <edge source="spellout.Controller" target="spellout.Output">
+      <point x="-44.625" y="-26.5" />
+      <point x="377.125" y="281.0" />
+      <point x="113.0" y="281.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="spellout.Controller" target="spellout.NumberReader">
+      <point x="14.875" y="-26.5" />
+      <point x="436.625" y="271.0" />
+      <point x="515.5" y="271.0" />
+      <point x="-85.5" y="125.5" />
+    </edge>
+    <edge source="spellout.Task5" target="spellout.Controller">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="spellout.Controller" target="spellout.Input">
+      <point x="-14.875" y="-26.5" />
+      <point x="406.875" y="271.0" />
+      <point x="328.0" y="271.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="217.5" y="256.5" />
   <SelectedNodes>
-    <node>spellout.Controller</node>
+    <node>spellout.Input</node>
   </SelectedNodes>
   <Categories>
     <Category>Constructors</Category>

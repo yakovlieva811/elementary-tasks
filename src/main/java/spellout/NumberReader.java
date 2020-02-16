@@ -1,163 +1,180 @@
 package spellout;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class NumberReader {
 
-    private BigInteger number;
-    private StringBuilder numberInWords = new StringBuilder(" ");
-    private ArrayList segments = new ArrayList();
-
-    public void setNumber(BigInteger number) {
-        this.number = number;
+    public StringBuilder getResult() {
+        return result;
     }
-
-    public StringBuilder getNumberInWords() {
-        go();
-        return numberInWords;
-    }
+public int amountOfNamesForSegments(){
+        return forms.length;
+}
+    private List<String> segments;
+    private StringBuilder result;
+    private String number;
 
     private String[][] nums1 = {
-            {"", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"},
-            {"", "одна", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"}};
+            {"", "одна", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"},
+            {"", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"}};
     private String[] nums11 = {"", "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать", "двадцать"};
     private String[] nums10 = {"", "десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"};
     private String[] nums100 = {"", "сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"};
     private String[][] forms = {
-            {"тысяча", "тысячи", "тысяч", ""},
-            {"миллион", "миллиона", "миллионов", "0"},
-            {"миллиард", "миллиарда", "миллиардов", "0"},
-            {"триллион", "триллиона", "триллионов", "0"},
-            {"квадриллион", "квадриллионa", "квадриллионов", "0"},
-            {"квинтиллион", "квинтиллиона", "квинтиллионов", "0"},
-            {"секстиллион", "секстиллиона", "секстиллионов", "0"},
-            {"септиллион", "септиллиона", "септиллионов", "0"},
-            {"октиллион", "октиллиона", "октиллионов", "0"},
-            {"нониллион", "нониллиона", "нониллионов", "0"},
-            {"дециллион", "дециллиона", "дециллионов", "0"},
-            {"ундециллион", "ундециллиона", "ундециллионов", "0"},
-            {"дуодециллион", "дуодециллиона", "дуодециллионов", "0"},
-            {"тредециллион", "тредециллиона", "тредециллионов", "0"},
-            {"кватуордециллион", "кватуордециллиона", "кватуордециллионов", "0"},
-            {"квиндециллион", "квиндециллиона", "квиндециллионов", "0"},
-            {"сексдециллион", "сексдециллиона", "сексдециллионов", "0"},
-            {"септендециллион", "септендециллиона", "септендециллионов", "0"},
-            {"октодециллион", "октодециллиона", "октодециллионов", "0"},
-            {"новемдециллион", "новемдециллиона", "новемдециллионов", "0"},
-            {"вигинтиллион", "вигинтиллиона", "вигинтиллионов", "0"},
-            {"унвигинтиллион", "унвигинтиллиона", "унвигинтиллионов", "0"},
-            {"дуовигинтиллион", "дуовигинтиллиона", "дуовигинтиллионов", "0"},
-            {"тревигинтиллион", "тревигинтиллиона", "тревигинтиллионов", "0"},
-            {"кватуорвигинтиллион", "кватуорвигинтиллиона", "кватуорвигинтиллионов", "0"},
-            {"квинвигинтиллион", "квинвигинтиллиона", "квинвигинтиллионов", "0"},
-            {"сексвигинтиллион", "сексвигинтиллиона", "сексвигинтиллионов", "0"},
-            {"септенвигинтиллион", "септенвигинтиллиона", "септенвигинтиллионов", "0"},
-            {"октовигинтиллион", "октовигинтиллиона", "октовигинтиллионов", "0"},
-            {"новемвигинтиллион", "новемвигинтиллиона", "новемвигинтиллионов", "0"},
-            {"тригинтиллион", "тригинтиллиона", "тригинтиллионов", "0"},
-            {"унтригинтиллион", "унтригинтиллиона", "унтригинтиллионов", "0"},
-            {"дуотригинтиллион", "дуотригинтиллиона", "дуотригинтиллионов", "0"},
-    };
+            {"тысяча", "тысячи", "тысяч"},
+            {"миллион", "миллиона", "миллионов"},
+            {"миллиард", "миллиарда", "миллиардов"},
+            {"триллион", "триллиона", "триллионов"},
+            {"квадриллион", "квадриллионa", "квадриллионов"},
+            {"квинтиллион", "квинтиллиона", "квинтиллионов"},
+            {"секстиллион", "секстиллиона", "секстиллионов"},
+            {"септиллион", "септиллиона", "септиллионов"},
+            {"октиллион", "октиллиона", "октиллионов"},
+            {"нониллион", "нониллиона", "нониллионов"},
+            {"дециллион", "дециллиона", "дециллионов"},
+            {"ундециллион", "ундециллиона", "ундециллионов"},
+            {"дуодециллион", "дуодециллиона", "дуодециллионов"},
+            {"тредециллион", "тредециллиона", "тредециллионов"},
+            {"кваттуордециллион", "кваттуордециллиона", "кваттуордециллионов"},
+            {"квиндециллион", "квиндециллиона", "квиндециллионов"},
+            {"сексдециллион", "сексдециллиона", "сексдециллионов"},
+            {"септендециллион", "септендециллиона", "септендециллионов"},
+            {"октодециллион", "октодециллиона", "октодециллионов"},
+            {"новемдециллион", "новемдециллиона", "новемдециллионов"},
+            {"вигинтиллион", "вигинтиллиона", "вигинтиллионов"},
+            {"унвигинтиллион", "унвигинтиллиона", "унвигинтиллионов"},
+            {"дуовигинтиллион", "дуовигинтиллиона", "дуовигинтиллионов"},
+            {"тревигинтиллион", "тревигинтиллиона", "тревигинтиллионов"},
+            {"кватуорвигинтиллион", "кватуорвигинтиллиона", "кватуорвигинтиллионов"},
+            {"квинвигинтиллион", "квинвигинтиллиона", "квинвигинтиллионов"},
+            {"сексвигинтиллион", "сексвигинтиллиона", "сексвигинтиллионов"},
+            {"септенвигинтиллион", "септенвигинтиллиона", "септенвигинтиллионов"},
+            {"октовигинтиллион", "октовигинтиллиона", "октовигинтиллионов"},
+            {"новемвигинтиллион", "новемвигинтиллиона", "новемвигинтиллионов"},
+            {"тригинтиллион", "тригинтиллиона", "тригинтиллионов"},
+            {"унтригинтиллион", "унтригинтиллиона", "унтригинтиллионов"},
+            {"дуотригинтиллион", "дуотригинтиллиона", "дуотригинтиллионов"}};
 
-    private StringBuilder go() {
-        if (number.compareTo(BigInteger.valueOf(0)) == 0) {
-            numberInWords.append("ноль");
-        } else if ((number.compareTo(BigInteger.valueOf(0))) == -1) {
-            setNumber(number.abs());
-            segments();
-            numberInWords.append("минус ");
-            analyzer();
+
+    public void translateNumber(String number) {
+        segments = new ArrayList<>();
+        result = new StringBuilder(" ");
+        this.number = number;
+        if ((number.startsWith("-"))) {
+            this.number = number.substring(1);
+            result.append("минус ");
+        }
+        if (areAllZeros()) {
+            result = new StringBuilder("ноль");
         } else {
-            segments();
+            segment();
+            Collections.reverse(segments);
             analyzer();
         }
-        return numberInWords;
+
     }
 
+    private boolean areAllZeros() {
+        for (int i = number.length(); i >= 1; i--) {
+            if (Integer.parseInt(number.substring(i - 1, i)) != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-    private void segments() {
+    private void segment() {
+        int i = number.length();
+        while (true) {
+            if (i - 3 > 0) {
+                segments.add(number.substring(i - 3, i));
+                i = i - 3;
+            } else {
+                segments.add(number.substring(0, i));
+                break;
+            }
+        }
+    }
 
-        while ((number.compareTo(BigInteger.valueOf(999))) == 1) {      // если наше число больше 999
-            BigInteger seg = number.divide(BigInteger.valueOf(1000));      //разбиваем: 56 111 222 / 1000 = 56 111
-            segments.add(number.subtract(seg.multiply(BigInteger.valueOf(1000))));     //56 111 222 - (56 111 000) = 222
-            number = seg; // уменьшили на число на один сегмент
+    private void readNumsFromSegment(String segmentString, int currentGender) {
+        /* получаем цифры из сегмета*/
+        int num1 = Integer.parseInt(segmentString.substring(0, 1));    // первая цифра
+        int num2 = Integer.parseInt(segmentString.substring(1, 2));    // вторая цифра
+        int num3 = Integer.parseInt(segmentString.substring(2, 3));    // третья цифра
+        int num23 = Integer.parseInt(segmentString.substring(1, 3));   // вторая и третья для двузначных
+
+        /* читаем цифры*/
+        if (Integer.parseInt(segmentString) > 99) {         // сотни
+            result.append(nums100[num1]).append(" ");
         }
 
-        segments.add(number);   // записали последний сегмент
-        Collections.reverse(segments);
+        if (num23 > 20) {
+            result.append(nums10[num2]).append(" ");    //десятки
+            result.append(nums1[currentGender][num3]).append(" ");   //единицы
+        } else {
+            if (num23 > 9) {   //[10;20]
+                result.append(nums11[num23 - 9]).append(" "); //-9 так как nums11.length=12 last nums11[11]
+            } else {
+                result.append(nums1[currentGender][num3]).append(" ");
+            }
+        }
     }
-
 
     private void analyzer() {
-
         int amountOfSegments = segments.size();
-        for (int i = 0; i < segments.size(); i++) {                 // todo попробывать изменить луп
-            int currentGender = Integer.parseInt(forms[amountOfSegments][3]);
-            int currentSegment = Integer.parseInt(segments.get(i).toString());
-            if (currentSegment == 0 && amountOfSegments > 1) {     // 56 000 454 ---> 000 пропускаем
+        for (String segment : segments) {
+            int currentGender;
+            if (amountOfSegments == 2) {
+                currentGender = 0;
+            } else {
+                currentGender = 1;
+            }
+
+            if (Integer.parseInt(segment) == 0 && amountOfSegments > 1) {     // 56 000 454 ---> 000 пропускаем
                 amountOfSegments--;
                 continue;
             }
 
-            String segmentString = String.valueOf(currentSegment);
             /* добавляем нули так как крашилось при получении цифр*/
-            if (segmentString.length() == 1) {
-                segmentString = "00" + segmentString;
-            } else if (segmentString.length() == 2) {
-                segmentString = "0" + segmentString;
+            if (segment.length() == 1) {
+                segment = "00" + segment;
+            } else if (segment.length() == 2) {
+                segment = "0" + segment;
             }
 
-            /* получаем цифры из сегмета*/
-            int num1 = Integer.parseInt(segmentString.substring(0, 1));    // первая цифра
-            int num2 = Integer.parseInt(segmentString.substring(1, 2));    // вторая цифра
-            int num3 = Integer.parseInt(segmentString.substring(2, 3));    // третья цифра
-            int num23 = Integer.parseInt(segmentString.substring(1, 3));   // вторая и третья для двузначных
-
-            System.out.println("1) num23 = " + num23);
-            /* читаем цифры*/
-            if (currentSegment > 99) {         // сотни
-                numberInWords.append(nums100[num1]).append(" ");
-            }
-            if (num23 > 20) {
-                numberInWords.append(nums10[num2]).append(" ");    //десятки
-                numberInWords.append(nums1[currentGender][num3]).append(" ");   //единицы
-            } else if (num23 > 9) {   //[10;20]
-                numberInWords.append(nums11[num23 - 9]).append(" "); //-9 так как nums11.length=12 last nums11[11]
-            } else {
-                numberInWords.append(nums1[currentGender][num3]).append(" ");
-            }
+            readNumsFromSegment(segment, currentGender);
 
             /*добавляем названия разрядов*/
-            if ((amountOfSegments - 2) > -1) {
-                numberInWords.append(analyzeWordsForm(num23, forms[amountOfSegments - 2][0], forms[amountOfSegments - 2][1], forms[amountOfSegments - 2][2])).append(" ");
+            if (amountOfSegments > 1) {
+                addNames(segment, amountOfSegments);
             }
             amountOfSegments--;
         }
     }
 
+    private void addNames(String segmentString, int amountOfSegments) {
+        result.append(endingOfSegmentName(Integer.parseInt(segmentString.substring(1, 3)), forms[amountOfSegments - 2][0], forms[amountOfSegments - 2][1], forms[amountOfSegments - 2][2])).append(" ");
+    }
 
-    private String analyzeWordsForm(int currentSegment, String wordFormFor1, String wordFormFor24, String wordFormFor5AndMore) {
-        System.out.println("currentSegment = " + currentSegment);
-        if (currentSegment > 10 && currentSegment < 21) {
-            int num = currentSegment;
-            System.out.println("num = " + num);
-
+    private String endingOfSegmentName(int currentSegment, String wordFormFor1, String wordFormFor24, String wordFormFor5AndMore) {
+        int num = currentSegment % 10;
+        if (currentSegment > 10 && currentSegment < 20) {
             return wordFormFor5AndMore;
+        } else if (num > 1 && num < 5) {
+            return wordFormFor24;
+        } else if (num == 1) {
+            return wordFormFor1;
         } else {
-            int num = currentSegment % 10;
-            System.out.println("num = " + num);
-            if (num > 1 && num < 5) {
-                return wordFormFor24;
-            } else if (num == 1) {
-                return wordFormFor1;
-            }
             return wordFormFor5AndMore;
-
         }
     }
+
+
 }
+
+
 
 
 
